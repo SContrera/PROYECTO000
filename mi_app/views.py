@@ -104,3 +104,13 @@ def entregablesformulario(request):
             miFormulario = Entregablesformulario()
 
       return render(request, "app/entregablesformulario.html", {"miFormulario": miFormulario})
+
+
+def busquedacamada(request):
+      return render(request, 'app/busquedacamada.html', )
+
+def buscar(request):
+      respuesta = f"Estoy buscando la camada número: {request.GET['camada']}"
+
+      return HttpResponse(respuesta)
+      
